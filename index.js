@@ -7,7 +7,7 @@ const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId, ObjectID } = require('mongodb');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
-app.use(cors())
+app.use(cors({ origin: 'https://doctors-portal-7bf3c.web.app' }))
 app.use(express.json())
 
 
